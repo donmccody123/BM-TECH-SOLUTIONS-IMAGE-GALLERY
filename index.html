@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BM TECH SOLUTIONS - Image Gallery</title>
+    <link rel ="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <div class="logo-section">
+                    <img src="Images/headshot.png" alt="BM Logo" class="logo">
+                </div>
+                <div class="title-section">
+                    <h1>BM TECH SOLUTIONS</h1>
+                    <p>Professional Image Gallery</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="section-divider"></div>
+
+        <!-- Automatic Slideshow -->
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="Images/Slideshow/event-connections2.jpg" alt="event-connections2">
+                <div class="slide-caption">Professional Networking</div>
+            </div>
+
+            <div class="slide fade">
+                <img src="Images/Slideshow/global-connection.jpg" alt="global-connection">
+                <div class="slide-caption">Global Networking</div>
+            </div>
+
+            <div class="slide fade">
+                <img src="Images/Slideshow/students-mentor.JPG" alt="students-mentor">
+                <div class="slide-caption">Educational Leadership</div>
+            </div>
+
+            <div class="slide fade">
+                <img src="Images/Slideshow/tech-event1.JPG" alt="tech-event1">
+                <div class="slide-caption">Technology Conference</div>
+            </div>
+
+            <div class="slide fade">
+                <img src="Images/Slideshow/tech-team1.jpg" alt="tech-team1">
+                <div class="slide-caption">Team Collaboration</div>
+            </div>
+
+            <div class="slide fade">
+                <img src="Images/Slideshow/tech-team2.jpg" alt="tech-team2">
+                <div class="slide-caption">Team Building</div>
+            </div>
+
+            <div class="slide fade">
+                <img src="Images/Slideshow/trips.jpg" alt="trips">
+                <div class="slide-caption">Travel Experience</div>
+            </div>
+
+            <div class="slide fade">
+                <img src="Images/Slideshow/volunteer-team1.jpg" alt="volunteer-team1">
+                <div class="slide-caption">Community Work</div>
+            </div>
+
+            <div class="slide fade">
+                <img src="Images/Slideshow/volunteer-team2.jpg" alt="volunteer-team2">
+                <div class="slide-caption">Volunteer Team</div>
+            </div>
+
+            <div class="slide fade">
+                <img src="Images/Slideshow/volunteering1.JPG" alt="volunteering1">
+                <div class="slide-caption">Community Service</div>
+            </div>
+
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+                <span class="dot" onclick="currentSlide(8)"></span>
+                <span class="dot" onclick="currentSlide(9)"></span>
+                <span class="dot" onclick="currentSlide(10)"></span>
+            </div>
+        </div>
+
+        <h2 class="gallery-title">Image Gallery</h2>
+        <div class="gallery">
+            <div class="gallery-item" onclick="openLightbox(0)">
+                <img src="Images/coding.jpg" alt="coding">
+                <div class="overlay">
+                    <span>View Image</span>
+                </div>
+                <div class="gallery-caption">
+                    <h3>Programming & Development</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(1)">
+                <img src="Images/event-connections1.jpg" alt="event-connections1">
+                <div class="overlay">
+                    <span>View Image</span>
+                </div>
+                <div class="gallery-caption">
+                    <h3>Professional Networking</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(2)">
+                <img src="Images/event-connections2.jpg" alt="event-connections2">
+                <div class="overlay">
+                    <span>View Image</span>
+                </div>
+                <div class="gallery-caption">
+                    <h3>Event Engagement</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(3)">
+                <img src="Images/event-connections3.jpg" alt="event-connections3">
+                <div class="overlay">
+                    <span>View Image</span>
+                </div>
+                <div class="gallery-caption">
+                    <h3>Connection Moments</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(4)">
+                <img src="Images/event-connections4.jpg" alt="event-connections4">
+                <div class="overlay">
+                    <span>View Image</span>
+                </div>
+                <div class="gallery-caption">
+                    <h3>Networking Events</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(5)">
+                <img src="Images/event-connections5.jpg" alt="event-connections5">
+                <div class="overlay">
+                    <span>View Image</span>
+                </div>
+                <div class="gallery-caption">
+                    <h3>Professional Engagement</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(6)">
+                <img src="Images/exploring1.jpg" alt="exploring1">
+                <div class="overlay">
+                    <span>View Image</span>
+                </div>
+                <div class="gallery-caption">
+                    <h3>Adventure & Exploration</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(7)">
+                <img src="Images/global-exploring.jpg" alt="global-exploring">
+                <div class="overlay">
+                    <span>View Image</span>
+                </div>
+                <div class="gallery-caption">
+                    <h3>Global Exploration</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(8)">
+                <img src="Images/me.jpg" alt="me">
+                <div class="overlay">
+                    <span>View Image</span>
+                </div>
+                <div class="gallery-caption">
+                    <h3>Personal Portrait</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(9)">
+                <img src="Images/me2.jpg" alt="me2">
+                <div class="overlay">
+                    <span>View Image</span>
+                </div>
+                <div class="gallery-caption">
+                    <h3>Professional Shot</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(10)">
+                <img src="Images/my-office.jpg" alt="my-office">
+                <div class="overlay">
+                    <span>View Image</span>
+                </div>
+                <div class="gallery-caption">
+                    <h3>Professional Workspace</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(11)">
+                <img src="Images/Prof. Pic2.jpg" alt="Prof. Pic2">
+                <div class="overlay">
+                    <span>View Image</span>
+                </div>
+                <div class="gallery-caption">
+                    <h3>Professional Portrait</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(12)">
+                <img src="Images/setup.jpg" alt="setup">
+                <div class="overlay">
+                    <span>View Image</span>
+                </div>
+                <div class="gallery-caption">
+                    <h3>Technical Setup</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(13)">
+                <img src="Images/students-mentor.JPG" alt="students-mentor">
+                <div class="overlay">
+                    <span>View Image</span>
+                </div>
+                <div class="gallery-caption">
+                    <h3>Educational Leadership</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(14)">
+                <img src="Images/tech-event2.JPG" alt="tech-event2">
+                <div class="overlay">
+                    <span>View Image</span>
+                </div>
+                <div class="gallery-caption">
+                    <h3>Tech Gathering</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(15)">
+                <img src="Images/tech-event3.jpg" alt="tech-event3">
+                <div class="overlay">
+                    <span>View Image</span>
+                </div>
+                <div class="gallery-caption">
+                    <h3>Innovation Event</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(16)">
+                <img src="Images/tech-event4.jpg" alt="tech-event4">
+                <div class="overlay">
+                    <span>View Image</span>
+                </div>
+                <div class="gallery-caption">
+                    <h3>Tech Summit</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(17)">
+                <img src="Images/tech-team1.jpg" alt="tech-team1">
+                <div class="overlay">
+                    <span>View Image</span>
+                </div>
+                <div class="gallery-caption">
+                    <h3>Team Collaboration</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(18)">
+                <img src="Images/tech-team2.jpg" alt="tech-team2">
+                <div class="overlay">
+                    <span>View Image</span>
+                </div>
+                <div class="gallery-caption">
+                    <h3>Team Building</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(19)">
+                <img src="Images/trips.jpg" alt="trips">
+                <div class="overlay">
+                    <span>View Image</span>
+                </div>
+                <div class="gallery-caption">
+                    <h3>Travel Experience</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(20)">
+                <img src="Images/volunteer-team1.jpg" alt="volunteer-team1">
+                <div class="overlay">
+                    <span>View Image</span>
+                </div>
+                <div class="gallery-caption">
+                    <h3>Community Work</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(21)">
+                <img src="Images/volunteer-team2.jpg" alt="volunteer-team2">
+                <div class="overlay">
+                    <span>View Image</span>
+                </div>
+                <div class="gallery-caption">
+                    <h3>Volunteer Team</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(22)">
+                <img src="Images/volunteering2.jpg" alt="volunteering2">
+                <div class="overlay">
+                    <span>View Image</span>
+                </div>
+                <div class="gallery-caption">
+                    <h3>Community Service</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(23)">
+                <img src="Images/with-colleague.JPG" alt="with-colleague">
+                <div class="overlay">
+                    <span>View Image</span>
+                </div>
+                <div class="gallery-caption">
+                    <h3>Professional Connection</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="Images/headshot.png" alt="BM Logo" class="footer-logo">
+                <div>
+                    <h3>BM TECH SOLUTIONS</h3>
+                    <p>Professional Image Gallery</p>
+                </div>
+            </div>
+            <div class="footer-meta">
+                <p>&copy; <span id="footer-year"></span> BM Tech Solutions. All rights reserved.</p>
+                <p class="footer-contact">Website: bmtechsolutions.me</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <span class="close-btn" onclick="closeLightbox(event)">&times;</span>
+        <span class="nav-btn prev-btn" onclick="changeImage(-1, event)">&#10094;</span>
+        <span class="nav-btn next-btn" onclick="changeImage(1, event)">&#10095;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
