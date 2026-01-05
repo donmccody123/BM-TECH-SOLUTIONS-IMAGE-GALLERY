@@ -16,7 +16,7 @@
             user-select: none;
         }
 
-        /* Prevent image dragging and selection */
+        /* Prevent image dragging and selection but allow clicks */
         img {
             -webkit-user-drag: none;
             -khtml-user-drag: none;
@@ -25,9 +25,16 @@
             user-drag: none;
         }
 
-        /* Allow clicks on gallery items */
-        .gallery-item, .gallery-item img {
+        /* Ensure clickable elements work */
+        .gallery-item, 
+        .prev, 
+        .next, 
+        .dot, 
+        .close-btn, 
+        .nav-btn,
+        .lightbox {
             pointer-events: auto;
+            cursor: pointer;
         }
 
         /* Allow text selection for captions only */
