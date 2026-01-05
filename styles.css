@@ -16,7 +16,7 @@
             user-select: none;
         }
 
-        /* Prevent image dragging and selection but allow clicks */
+        /* Prevent image dragging but NOT pointer events */
         img {
             -webkit-user-drag: none;
             -khtml-user-drag: none;
@@ -25,15 +25,19 @@
             user-drag: none;
         }
 
-        /* Ensure clickable elements work */
+        /* Ensure ALL clickable elements work */
         .gallery-item, 
+        .gallery-item *,
+        .slideshow-container *,
         .prev, 
         .next, 
         .dot, 
         .close-btn, 
         .nav-btn,
-        .lightbox {
-            pointer-events: auto;
+        .lightbox,
+        button,
+        a {
+            pointer-events: auto !important;
             cursor: pointer;
         }
 
