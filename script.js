@@ -97,8 +97,51 @@
             lightboxCaption.textContent = caption;
         }
 
-        // Keyboard navigation
+        // Security: Disable right-click context menu
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+        });
+
+        // Security: Disable common keyboard shortcuts for saving/printing
         document.addEventListener('keydown', function(e) {
+            // Disable F12 (DevTools)
+            if (e.key === 'F12') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+S (Save)
+            if (e.ctrlKey && e.key === 's') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+Shift+I (DevTools)
+            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+Shift+C (Inspect)
+            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+U (View Source)
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+P (Print)
+            if (e.ctrlKey && e.key === 'p') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable PrintScreen
+            if (e.key === 'PrintScreen') {
+                e.preventDefault();
+                return false;
+            }
+
+            // Allow keyboard navigation in lightbox
             if (lightbox.classList.contains('active')) {
                 if (e.key === 'Escape') {
                     lightbox.classList.remove('active');
