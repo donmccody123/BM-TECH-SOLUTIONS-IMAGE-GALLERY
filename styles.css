@@ -4,49 +4,11 @@
             box-sizing: border-box;
         }
 
-        /* Disable text/image selection and right-click */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-        /* Prevent image dragging but NOT pointer events */
-        img {
-            -webkit-user-drag: none;
-            -khtml-user-drag: none;
-            -moz-user-drag: none;
-            -o-user-drag: none;
-            user-drag: none;
-        }
-
-        /* Ensure ALL clickable elements work */
-        .gallery-item, 
-        .gallery-item *,
-        .slideshow-container *,
-        .prev, 
-        .next, 
-        .dot, 
-        .close-btn, 
-        .nav-btn,
-        .lightbox,
-        button,
-        a {
-            pointer-events: auto !important;
-            cursor: pointer;
-        }
-
-        /* Allow text selection for captions only */
-        .gallery-caption, .footer, header {
-            -webkit-user-select: text;
-            -moz-user-select: text;
-            -ms-user-select: text;
-            user-select: text;
         }
 
         .container {
@@ -144,23 +106,6 @@
             object-fit: cover;
             display: block;
             transition: transform 0.3s ease;
-            position: relative;
-        }
-
-        /* Watermark overlay on all images */
-        .gallery-item::before {
-            content: 'BM TECH SOLUTIONS';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(-45deg);
-            font-size: 2em;
-            color: rgba(255, 255, 255, 0.15);
-            font-weight: bold;
-            pointer-events: none;
-            z-index: 1;
-            white-space: nowrap;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         .gallery-item:hover img {
