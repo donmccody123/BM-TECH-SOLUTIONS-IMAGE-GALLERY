@@ -18,12 +18,16 @@
 
         /* Prevent image dragging and selection */
         img {
-            pointer-events: none;
             -webkit-user-drag: none;
             -khtml-user-drag: none;
             -moz-user-drag: none;
             -o-user-drag: none;
             user-drag: none;
+        }
+
+        /* Allow clicks on gallery items */
+        .gallery-item, .gallery-item img {
+            pointer-events: auto;
         }
 
         /* Allow text selection for captions only */
