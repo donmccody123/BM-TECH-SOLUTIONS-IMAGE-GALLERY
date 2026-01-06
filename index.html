@@ -7,6 +7,7 @@
     <link rel ="stylesheet" href="styles.css">
     <link rel="icon" href="Images/headshot.png" type="image/png">
     <link rel="apple-touch-icon" href="Images/headshot.png">
+    <link rel="preload" as="image" href="Images/Slideshow/event-connections2.jpg">
 </head>
 <body>
     <div class="container">
@@ -314,7 +315,7 @@
                     <h3>Volunteer Team</h3>
                 </div>
             </div>
-0
+
             <div class="gallery-item" onclick="openLightbox(22)">
                 <img src="Images/volunteering2.jpg" alt="volunteering2">
                 <div class="overlay">
@@ -365,6 +366,15 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+        (function(){
+            var imgs = document.querySelectorAll('img');
+            imgs.forEach(function(img){
+                if(!img.getAttribute('loading')) img.setAttribute('loading','lazy');
+                if(!img.getAttribute('decoding')) img.setAttribute('decoding','async');
+            });
+        })();
+    </script>
 
 </body>
 </html>
